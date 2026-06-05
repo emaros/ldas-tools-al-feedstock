@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ldas-tools-al
-  version: 2.8.0
+  version: "2.8.1"
   # dependencies
   ldas_tools_cmake_version: 1.4.0
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: http://software.ligo.org/lscsoft/source/${{ name }}-${{ version }}.tar.gz
-  sha256: c70aedfdf2081472a8f9c47c09da160b9f781e77b8e8ab5bdbcf6be05ea0bd92
+  sha256: 59edc18df2e1cfd95de9f949e195d2905628db53b23d7ff29db8787bd5b9fe22
   patches:
     # when cross-compiling without an emulator disable some checks that use try_run
     # see https://git.ligo.org/ldastools/LDAS_Tools/-/issues/117
@@ -20,14 +20,9 @@ source:
       then: no-check-procfs.patch
     # disable tPSInfo test on ppc64le
     - arch-test-psinfo.patch
-    # fix https://git.ligo.org/computing/ldastools/LDAS_Tools/-/issues/228
-    - fix-reverse.hh.patch
-    # declare libs.private in pkg-config file
-    # seee https://git.ligo.org/computing/ldastools/LDAS_Tools/-/merge_requests/234
-    - libs.private.patch
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
