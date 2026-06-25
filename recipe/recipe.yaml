@@ -18,8 +18,6 @@ source:
     # see https://git.ligo.org/ldastools/LDAS_Tools/-/issues/117
     - if: osx and arm64
       then: no-check-procfs.patch
-    # disable tPSInfo test on ppc64le
-    - arch-test-psinfo.patch
 
 build:
   number: 0
