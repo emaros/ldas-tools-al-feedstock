@@ -28,7 +28,7 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
-    - cmake >=3.6
+    - cmake >=3.12,<4.0.0a0
     - make
     - pkg-config
   host:
