@@ -3,6 +3,11 @@
 mkdir -p _build
 pushd _build
 
+# Linux
+if [[ "${target_platform}" == "linux"* ]]; then
+  export CMAKE_ARGS="${CMAKE_ARGS} -DHAVE_PROCFS_PSINFO=0"
+fi
+
 # macOS
 if [ "$(uname)" == "Darwin" ]; then
   export CMAKE_ARGS="${CMAKE_ARGS} -DCMAKE_OSX_ARCHITECTURES:STRING=${OSX_ARCH}"
