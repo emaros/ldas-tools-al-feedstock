@@ -13,11 +13,6 @@ package:
 source:
   url: http://software.ligo.org/lscsoft/source/${{ name }}-${{ version }}.tar.gz
   sha256: 698d1061c7ec416476400459b98bd74ef67646c72f28b5c6eabd6a27127e43e6
-  patches:
-    # when cross-compiling without an emulator disable some checks that use try_run
-    # see https://git.ligo.org/ldastools/LDAS_Tools/-/issues/117
-    - if: osx and arm64
-      then: no-check-procfs.patch
 
 build:
   number: 0
