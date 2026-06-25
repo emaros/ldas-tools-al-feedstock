@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ldas-tools-al
-  version: "2.8.1"
+  version: "2.10.0"
   # dependencies
   ldas_tools_cmake_version: 1.4.0
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: http://software.ligo.org/lscsoft/source/${{ name }}-${{ version }}.tar.gz
-  sha256: 59edc18df2e1cfd95de9f949e195d2905628db53b23d7ff29db8787bd5b9fe22
+  sha256: 698d1061c7ec416476400459b98bd74ef67646c72f28b5c6eabd6a27127e43e6
   patches:
     # when cross-compiling without an emulator disable some checks that use try_run
     # see https://git.ligo.org/ldastools/LDAS_Tools/-/issues/117
