@@ -4,7 +4,7 @@ context:
   name: ldas-tools-al
   version: "2.10.0"
   # dependencies
-  ldas_tools_cmake_version: 1.4.0
+  ldas_tools_cmake_version: 1.5.0
 
 package:
   name: ${{ name }}
