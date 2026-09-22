@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ldas-tools-al
-  version: "2.10.0"
+  version: "2.10.1"
   # dependencies
   ldas_tools_cmake_version: 1.5.0
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: http://software.ligo.org/lscsoft/source/${{ name }}-${{ version }}.tar.gz
-  sha256: 698d1061c7ec416476400459b98bd74ef67646c72f28b5c6eabd6a27127e43e6
+  sha256: 06a740f5ca9c6fdc3dd58a254051070744776f2c68e58f22bc0724ee4f2895c1
 
 build:
   number: 0
